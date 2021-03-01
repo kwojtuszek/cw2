@@ -4,9 +4,9 @@ require_once dirname(__FILE__).'/../config_credit.php';
 include _ROOT_PATH.'/app/security/keeper.php';
 
 function getVariables(&$variables) {
-$variables['x'] = isset($_REQUEST['x']) ? $_REQUEST['x'] : null;
-$variables['y'] = isset($_REQUEST['y']) ? $_REQUEST['y'] : null;
-$variables['z'] = isset($_REQUEST['z']) ? $_REQUEST['z'] : null;
+    $variables['x'] = isset($_REQUEST['x']) ? $_REQUEST['x'] : null;
+    $variables['y'] = isset($_REQUEST['y']) ? $_REQUEST['y'] : null;
+    $variables['z'] = isset($_REQUEST['z']) ? $_REQUEST['z'] : null;
 }
 
 function validate(&$variables, &$messages) {
@@ -42,11 +42,11 @@ function validate(&$variables, &$messages) {
 
 
 function calculate(&$variables, &$messages) {
-$x = intval($variables['x']);
-$y = floatval($variables['y']);
-$z = intval($variables['z']);
+    $x = intval($variables['x']);
+    $y = floatval($variables['y']);
+    $z = intval($variables['z']);
 
-$variables['result'] = (($y/100 * $x) + $x) / ($z*12);
+    $variables['result'] = (($y/100 * $x) + $x) / ($z*12);
 }
 
 $variables = array();
